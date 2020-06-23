@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue | Chapter 1</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="container" id="app">
+		
+		<h1>Hello Vue!</h1>
+		<ul>
+			<li v-for="name in names">{{ name }}</li>
+		</ul>
+		<div class="row">
+			<div class="col">
+				<input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" v-model="newName">
+			</div>
+			<div class="col">
+				<button type="button" class="btn btn-primary" @click="addName">Click me!</button>
+			</div>
+		</div>	
+	</div>
+</body>
+<script>
+	new Vue({
+		el: "#app",
+		data: {
+			newName: '',
+			names: ['Donda', 'Judy', 'Jojo']
+		},
+		methods: {
+			addName() {
+				this.names.push(this.newName)
+				this.newName = ''
+			}
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue | Chapter 2</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style type="text/css">
+	.btn-disable
+	{
+		cursor: not-allowed;
+		pointer-events: none;
+
+		/*Button disabled - CSS color class*/
+		color: #c0c0c0;
+		background-color: #ffffff;
+	}
+</style>
+</head>
+<body>
+	<div class="container" id="app">
+		<div class="row pt-3">
+			<h1>Vue | Chapter 2</h1>
+		</div>
+		<div class="row pt-3">
+			<input type="text" class="form-control" @keyup="toggleBtn" v-model="userInput">
+		</div>
+		
+		<div class="row pt-3">
+			<button type="button" class="btn btn-primary" :disabled="disabledBtn" >Click Me!</button>
+		</div>
+		
+
+		
+	</div>
+</body>
+<script>
+	new Vue({
+		el: "#app",
+		data: {
+			userInput: '',
+			disabledBtn : true
+		},
+		methods: {
+			toggleBtn () {
+				
+				let length = this.userInput.length;
+
+				if (length > 0) {
+					this.disabledBtn = false
+				} else {
+					this.disabledBtn = true
+				}
+
+			}
+		}
+	})
+</script>
+</html>

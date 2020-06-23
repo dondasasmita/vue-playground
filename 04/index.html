@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue | Chapter 4</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="container" id="app">
+		<div class="row pt-3">
+			<div class="col-md-6">
+				<list-title :title="'All Todos'"></list-title>
+				<ul>
+					<task v-for="taskItem in incompleteTasks" :task="taskItem" ></task>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<list-title :title="'Completed Todos'"></list-title>
+				<ul>
+					<task v-for="taskItem in completedTasks" :task="taskItem" ></task>
+				</ul>
+			</div>
+		</div>		
+	</div>
+</body>
+<script src="main.js"></script>
+</html>
