@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue | Chapter 6</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="container" id="app">
+		<donda-modal v-show="showModal" @close="showModal = false"></donda-modal>
+		<div class="row pt-6">
+			<button type="button" class="btn btn-secondary"  @click="showModal = true">Show Modal</button>
+		</div>
+	</div>
+</body>
+<script src="main.js"></script>
+</html>
