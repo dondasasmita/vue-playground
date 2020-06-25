@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+  <title>GST Tax Calculator</title>
+
+  <!-- Required Stylesheets -->
+  <link
+  type="text/css"
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css"
+  />
+
+  <style type="text/css">
+    body {
+      padding-top: 40px;
+    }
+  </style>
+
+  <!-- Required scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <!-- Our application root element -->
+  <div id="app" class="container">
+
+    <div class="columns">
+      <div class="column is-1"></div>
+      <div class="column is-10">
+       <h4 class="is-centered">GST Calculator</h4>
+       
+        <div class="box">
+           <total-amount @total-amount-received="calculateGst"></total-amount>
+        </div>
+        <div class="box" v-if="gstAmount > 0" >
+           <h6>GST amount = {{gstAmount}}</h6> 
+        </div>
+      </div>
+       
+      <div class="column is-1"></div>
+    </div>     
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
