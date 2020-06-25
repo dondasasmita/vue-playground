@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+  <title>Bulma Vue</title>
+
+  <!-- Required Stylesheets -->
+  <link
+  type="text/css"
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css"
+  />
+
+  <!-- Required scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <!-- Our application root element -->
+  <div id="app" class="container">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+
+        <a class="navbar-item">
+          Documentation
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About
+            </a>
+            <a class="navbar-item">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <div class="columns">
+      <div class="column is-1"></div>
+      <div class="column is-10">
+        <d-tabs>
+
+          <!-- Eg: For loop from response data as content -->
+            <tab-content title="Category 1">
+              <h5>This is content of category 1</h5>
+            </tab-content>
+            <tab-content title="Category 2">
+              <h5>This is content of category 2</h5>
+            </tab-content>
+            <tab-content title="Category 3">
+              <h5>This is content of category 3</h5>
+            </tab-content>
+            <tab-content title="Category 4">
+              <h5>This is content of category 4</h5>
+            </tab-content>
+            <tab-content title="Category 5">
+              <h5>This is content of category 5</h5>
+            </tab-content>
+        
+        </d-tabs>
+      </div>
+       
+      <div class="column is-1"></div>
+    </div>     
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
