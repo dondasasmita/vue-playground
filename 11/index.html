@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+  <title>Vue | Named Slot</title>
+
+  <!-- Required Stylesheets -->
+  <link
+  type="text/css"
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.css"
+  />
+
+  <style type="text/css">
+  body {
+    padding-top: 40px;
+  }
+</style>
+
+<!-- Required scripts -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <!-- Our application root element -->
+  <div id="app" class="container">
+
+    <div class="columns">
+      <div class="column is-1"></div>
+      <div class="column is-10">
+        <order-view inline-template>
+          <div class="columns">
+            <div class="column">
+              <h1 class="notification is-primary">How many bowls would you like to order?</h1>
+             <div class="pt-6">
+              <button class="button is-small is-success is-rounded" @click="totalQty++">Add</button>
+              <button class="button is-small is-info is-rounded" @click="totalQty > 0 ? totalQty-- : 0">Minus</button>
+              <button class="button is-small is-danger is-rounded" @click="totalQty = 0">Cancel</button>
+            </div>
+          </div>
+          <div class="column">
+           <h3 v-show="totalQty > 0">Quantity : {{totalQty}}</h3>
+         </div>
+       </div>   
+     </order-view>
+   </div>
+   <div class="column is-1"></div>
+ </div>     
+</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
